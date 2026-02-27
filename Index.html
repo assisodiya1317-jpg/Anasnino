@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #111827;
+            --light: #f9fafb;
+            --gray: #6b7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 20px;
+            color: var(--dark);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .hero-text {
+            flex: 1 1 300px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .skills-list,
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Your Name</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="about">
+    <div class="hero-text">
+        <h2>Hello, I'm Your Name</h2>
+        <p>Short professional summary about yourself. Highlight your expertise, experience, and career goals in 2-3 sentences.</p>
+    </div>
+    <img src="https://via.placeholder.com/200" alt="Profile Photo Placeholder">
+</section>
+
+<section id="skills">
+    <h3>Skills</h3>
+    <div class="skills-list">
+        <div class="card">
+            <h4>Skill 1</h4>
+            <p>Description or proficiency level.</p>
+        </div>
+        <div class="card">
+            <h4>Skill 2</h4>
+            <p>Description or proficiency level.</p>
+        </div>
+        <div class="card">
+            <h4>Skill 3</h4>
+            <p>Description or proficiency level.</p>
+        </div>
+        <div class="card">
+            <h4>Skill 4</h4>
+            <p>Description or proficiency level.</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h3>Experience</h3>
+    <div class="card">
+        <h4>Job Title - Company Name</h4>
+        <p><em>Start Date – End Date</em></p>
+        <p>Brief description of responsibilities and achievements.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="project-list">
+        <div class="card">
+            <h4>Project Title</h4>
+            <p>Short description of the project.</p>
+            <a href="#" target="_blank">Live Demo</a> |
+            <a href="#" target="_blank">Source Code</a>
+        </div>
+        <div class="card">
+            <h4>Project Title</h4>
+            <p>Short description of the project.</p>
+            <a href="#" target="_blank">Live Demo</a> |
+            <a href="#" target="_blank">Source Code</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h3>Contact</h3>
+    <a href="mailto:your.email@example.com">your.email@example.com</a>
+    <a href="#">LinkedIn Profile</a>
+    <a href="#">GitHub Profile</a>
+    <a href="#">Portfolio Website</a>
+</section>
+
+<footer>
+    © 2026 Your Name. All rights reserved.
+</footer>
+
+</body>
+</html>
